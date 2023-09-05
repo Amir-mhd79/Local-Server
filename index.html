@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Server</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./swiper/swiper-bundle.min.css" />
+  </head>
+  <body>
+    <!--Start making Slider-->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <!--End of making Slider-->
+
+    <script src="./js/main.js" type="module"></script>
+    <script src="./swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 15,
+        centeredSlides: false,
+        slidesPerView: 2,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>
